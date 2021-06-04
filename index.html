@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0px;
+  padding: 0px;
+  background-image: url(discord_bg2.png);
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #5d00ff;
+  background-color: #5d00ff;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 13px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #904fff;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #4600bf;
+}
+
+/* Style the tab content */
+.tabcontent{
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  color: white;
+}
+
+#AboutUs.tabcontent {
+  position: absolute;
+  right: 100px;
+  bottom: 30px;
+  font-size: 25px;
+
+}
+
+.img {
+  background: url(cat_bot.png);
+  position: absolute;
+  left: -410px;
+  bottom: 234px;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+
+.socials {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: grey;
+  width: 1346px;
+}
+
+#contacts.socials {
+  padding: 10px;
+}
+
+.circle {
+  background-color: black;
+  width: 225px;
+  height: 225px;
+  position: relative;
+  left: -455px;
+  border-radius: 50%;
+  bottom: 200px;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Commands')">Commands</button>
+  <button class="tablinks" onclick="openCity(event, 'AboutUs')" id="defaultOpen">About Us</button>
+</div>
+
+<div id="AboutUs" class="tabcontent">
+  <h3>This is Catbot</h3>
+  <h4>And i don't know what he does, because<br />
+  i forgot what the owners told me to put in here,<br />
+  but heard that it's good for trollig your friends.
+  <div class="img"><img src="cat_bot.png" width="160px" height="160"></div></h4>
+  <div id="back" class="circle"></div>
+</div>
+
+
+<div id="Commands" class="tabcontent">
+  <h3>Commands</h3>
+  <h4>again, idk what they told me to put in here.<br />
+  or because i procrastinated and forgot the commands.</h4>
+</div>
+
+<div id="contacts" class="socials">
+  Web designer - <a href="https://discord.com/channels/699858493775282177/801995920794320927">@Forcompoundpro(link is forcompoundpro's server btw)</a><br />
+  developer/Creator of CatBot - @Tenku(i think)<br />
+  <br />
+  note: only frocompoundpro's socials are availabe now soo...yeahhhh....
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>
